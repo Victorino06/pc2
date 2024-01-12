@@ -1,0 +1,40 @@
+version: '3.3'
+services:
+  productpage:
+    build: ./practica_creativa2/bookinfo/src/productpage
+    image: 29/productpage
+    container_name: 29-productpage
+    ports:
+      - "9080:9080"
+    environment:
+      - GROUP_NUMBER=29
+
+  details:
+    build: ./practica_creativa2/bookinfo/src/details
+    image: 29/details
+    container_name: 29-details
+    ports:
+      - "9081:9080"
+    environment:
+      - SERVICE_VERSION=v1
+      - ENABLE_EXTERNAL_BOOK_SERVICE=true
+
+  reviews:
+    build: 
+      context: ./practica_creativa2/bookinfo/src/reviews/reviews-wlpcfg
+      dockerfile: Dockerfile
+    image: 29/reviews
+    container_name: 29-reviews
+    ports:
+      - "9082:9080"
+    environment:
+      - SERVICE_VERSION=v1
+
+  ratings:
+    build: ./practica_creativa2/bookinfo/src/ratings
+    image: 29/ratings
+    container_name: 29-ratings
+    ports:
+      - "9083:9080"
+    environment:
+      - SERVICE_VERSION=v1

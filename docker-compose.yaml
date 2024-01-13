@@ -1,7 +1,7 @@
 version: '3.3'
 services:
   productpage:
-    build: ./practica_creativa2/bookinfo/src/productpage
+    build: ./pc2_files/bookinfo/src/productpage
     image: 29/productpage
     container_name: 29-productpage
     ports:
@@ -10,7 +10,7 @@ services:
       - GROUP_NUMBER=29
 
   details:
-    build: ./practica_creativa2/bookinfo/src/details
+    build: ./pc2_files/bookinfo/src/details
     image: 29/details
     container_name: 29-details
     ports:
@@ -21,7 +21,7 @@ services:
 
   reviews:
     build: 
-      context: ./practica_creativa2/bookinfo/src/reviews/reviews-wlpcfg
+      context: ./pc2_files/bookinfo/src/reviews/reviews-wlpcfg
       dockerfile: Dockerfile
     image: 29/reviews
     container_name: 29-reviews
@@ -31,7 +31,7 @@ services:
       - SERVICE_VERSION=v1
 
   ratings:
-    build: ./practica_creativa2/bookinfo/src/ratings
+    build: ./pc2_files/bookinfo/src/ratings
     image: 29/ratings
     container_name: 29-ratings
     ports:

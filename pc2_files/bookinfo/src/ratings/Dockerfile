@@ -8,8 +8,6 @@ COPY ratings.js /opt/microservices
 
 ENV SERVICE_VERSION=v1
 
-ENV ENABLE_EXTERNAL_BOOK_SERVICE
-
 RUN npm install
 
 EXPOSE 9080

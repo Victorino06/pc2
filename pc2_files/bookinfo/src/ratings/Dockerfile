@@ -6,7 +6,7 @@ COPY package.json /opt/microservices
 
 COPY ratings.js /opt/microservices
 
-ENV SERVICE_VERSION v1
+ENV SERVICE_VERSION=v1
 
 RUN npm install
 

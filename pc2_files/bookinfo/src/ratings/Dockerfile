@@ -2,9 +2,9 @@ FROM node:12.18.1-slim
 
 WORKDIR /opt/microservices
 
-COPY package.json ./
+COPY package.json /opt/microservices
 
-COPY ratings.js ./
+COPY ratings.js /opt/microservices
 
 ENV SERVICE_VERSION v1
 

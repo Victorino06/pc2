@@ -2,7 +2,7 @@ FROM ruby:2.7.1-slim
 
 WORKDIR /opt/microservices
 
-COPY details.rb ./
+COPY details.rb /opt/microservices
 
 ENV SERVICE_VERSION v1
 

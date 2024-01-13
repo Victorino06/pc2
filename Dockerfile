@@ -3,16 +3,16 @@
 FROM python:3.7.7-slim
 
 # Establece el directorio de trabajo en el contenedor
-WORKDIR /app
+WORKDIR /productpage
 
 # Copia los archivos de requisitos
-COPY practica_creativa2/bookinfo/src/productpage/requirements.txt ./
+COPY practica_creativa2/bookinfo/src/productpage/requirements.txt /productpage
 
 # Instala las dependencias de Python
 RUN pip3 install -r requirements.txt
 
 # Copia el código de la aplicación al contenedor
-COPY practica_creativa2/bookinfo/src/productpage/ ./
+COPY practica_creativa2/bookinfo/src/productpage/ /productpage
 
 # Expone el puerto en el que se ejecutará la aplicación
 EXPOSE 9080
